@@ -1,4 +1,5 @@
 import os
+import math
 
 
 # Simple counting function
@@ -54,6 +55,20 @@ def delete_file(name):
     except FileNotFoundError:
         print("File not found!\n")
 
+# Square Root Function
+def square_root(num) -> int:
+    return math.sqrt(num)
+
+# Function to understand assertions
+def assertions(x):
+    try:
+        assert x > 0
+        y = square_root(x)
+        assert math.fabs(y*y - x) < 0.01
+        print(f"The number {x} is correct and is working Fine")
+    except AssertionError:
+        print(f"The number {x} is an incorrect value")
+
 def main():
     # Using count
     #gen = count()
@@ -72,13 +87,20 @@ def main():
     #read_text_files()
 
     # Writing to text files
-    write_text_files()
+    #write_text_files()
 
     # Printing current working directory
-    print_cwd()
+    #print_cwd()
 
     # Deleting a file
-    delete_file("file.txt")
+    #delete_file("file.txt")
+
+    # Square Root
+    #print(square_root(4))
+
+    # Assertions
+    assertions(-1) ## Will fail
+    assertions(4) # Will pass
 
 if __name__ == "__main__":
     main()
