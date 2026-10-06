@@ -4,7 +4,9 @@ import math
 
 # Commands to remember
 # uv add nccapy 
-# uv add
+# uv add flake8
+# uv add black
+# uv init intro
 
 def main():
     # starter_code()
